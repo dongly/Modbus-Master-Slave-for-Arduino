@@ -401,6 +401,12 @@ void Modbus::setTimeOut( uint16_t u16timeOut) {
   this->u16timeOut = u16timeOut;
 }
 
+/* return time-out value (ms)
+*/
+uint16_t Modbus::getTimeOut() {
+  return this->u16timeOut;
+}
+
 /**
  * @brief
  * Return communication Watchdog state.
