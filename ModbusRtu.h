@@ -205,6 +205,7 @@ public:
   uint8_t getLastError(); //!<get last error message
   void setID( uint8_t u8id ); //!<write new ID for the slave
   void end(); //!<finish any communication and release serial communication port
+  uint8_t * getBuff();
 };
 
 /* _____PUBLIC FUNCTIONS_____________________________________________________ */
@@ -1258,4 +1259,8 @@ int8_t Modbus::process_FC16( uint16_t *regs, uint16_t u16size ) {
   return u8CopyBufferSize;
 }
 
+uint8_t * Modbus::getBuff()
+{
+  return this->au8Buffer;
+}
 #endif // ___MODBUSRTU_H___
